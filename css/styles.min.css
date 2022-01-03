@@ -107,6 +107,39 @@ body {
       -ms-transform: translateY(16px);
           transform: translateY(16px);
 }
+.menu-indicator-circle__item ~ .menu-indicator-circle__indicator {
+  top: -100%;
+  opacity: 0;
+}
+.menu-indicator-circle__item.--active ~ .menu-indicator-circle__indicator {
+  top: -50%;
+  opacity: 1;
+}
+.menu-indicator-circle__item:nth-child(1):hover ~ .menu-indicator-circle__indicator {
+  -webkit-transform: translateX(calc(70px * 0));
+      -ms-transform: translateX(calc(70px * 0));
+          transform: translateX(calc(70px * 0));
+}
+.menu-indicator-circle__item:nth-child(2):hover ~ .menu-indicator-circle__indicator {
+  -webkit-transform: translateX(calc(70px * 1));
+      -ms-transform: translateX(calc(70px * 1));
+          transform: translateX(calc(70px * 1));
+}
+.menu-indicator-circle__item:nth-child(3):hover ~ .menu-indicator-circle__indicator {
+  -webkit-transform: translateX(calc(70px * 2));
+      -ms-transform: translateX(calc(70px * 2));
+          transform: translateX(calc(70px * 2));
+}
+.menu-indicator-circle__item:nth-child(4):hover ~ .menu-indicator-circle__indicator {
+  -webkit-transform: translateX(calc(70px * 3));
+      -ms-transform: translateX(calc(70px * 3));
+          transform: translateX(calc(70px * 3));
+}
+.menu-indicator-circle__item:nth-child(5):hover ~ .menu-indicator-circle__indicator {
+  -webkit-transform: translateX(calc(70px * 4));
+      -ms-transform: translateX(calc(70px * 4));
+          transform: translateX(calc(70px * 4));
+}
 .menu-indicator-circle__item:nth-child(1).--active ~ .menu-indicator-circle__indicator {
   -webkit-transform: translateX(calc(70px * 0));
       -ms-transform: translateX(calc(70px * 0));
@@ -142,7 +175,6 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
-  top: -50%;
 }
 .menu-indicator-circle__indicator::before, .menu-indicator-circle__indicator::after {
   content: "";
