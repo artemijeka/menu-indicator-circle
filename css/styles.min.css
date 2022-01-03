@@ -108,12 +108,12 @@ body {
           transform: translateY(16px);
 }
 .menu-indicator-circle__item ~ .menu-indicator-circle__indicator {
-  top: -100%;
   opacity: 0;
+  top: -100%;
 }
 .menu-indicator-circle__item.--active ~ .menu-indicator-circle__indicator {
-  top: -50%;
   opacity: 1;
+  top: -50%;
 }
 .menu-indicator-circle__item:nth-child(1):hover ~ .menu-indicator-circle__indicator {
   -webkit-transform: translateX(calc(70px * 0));
