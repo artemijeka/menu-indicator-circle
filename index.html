@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu with circle indicator | Меню с круговым индикатором</title>
+  <link rel="stylesheet" href="./css/styles.min.css">
+</head>
+
+<body>
+
+
+
+  <nav class="menu-indicator-circle">
+    <div class="menu-indicator-circle__list">
+      <a href="#bamballeya" class="menu-indicator-circle__item --active" style="--i:1;">
+        <img class="menu-indicator-circle__item-ico" src="./icons/home-outline.svg" alt="Home">
+        <span class="menu-indicator-circle__item-title">Home</span>
+      </a>
+      <a href="#bamballeya" class="menu-indicator-circle__item" style="--i:2;">
+        <img class="menu-indicator-circle__item-ico" src="./icons/person-outline.svg" alt="Home">
+        <span class="menu-indicator-circle__item-title">Profile</span>
+      </a>
+      <a href="#bamballeya" class="menu-indicator-circle__item" style="--i:3;">
+        <img class="menu-indicator-circle__item-ico" src="./icons/mail-outline.svg" alt="Home">
+        <span class="menu-indicator-circle__item-title">Messages</span>
+      </a>
+      <a href="#bamballeya" class="menu-indicator-circle__item" style="--i:4;">
+        <img class="menu-indicator-circle__item-ico" src="./icons/camera-outline.svg" alt="Home">
+        <span class="menu-indicator-circle__item-title">Photos</span>
+      </a>
+      <a href="#bamballeya" class="menu-indicator-circle__item" style="--i:5;">
+        <img class="menu-indicator-circle__item-ico" src="./icons/settings-outline.svg" alt="Home">
+        <span class="menu-indicator-circle__item-title">Settings</span>
+      </a>
+
+      <span class="menu-indicator-circle__indicator"></span>
+
+    </div><!-- /.menu-indicator-circle__list -->
+  </nav>
+
+
+  <script>
+    const navItems = document.querySelectorAll('.menu-indicator-circle__item');
+
+    navItems.forEach((item) => {
+      item.addEventListener('click', activateNavItem);
+    });
+
+    function activateNavItem() {
+      navItems.forEach((item) => {
+        item.classList.remove('--active');
+        this.classList.add('--active');
+      });
+    }
+
+  </script>
+
+
+</body>
+
+</html>
